@@ -24,9 +24,9 @@ class _MainScreenState extends State<MainScreen> {
    setState(() {
      temperature = weatherData.currentTemperature.round();
      city = weatherData.city;
-     WeatherDisplayData weatherDisplayData = weatherData.getWeatherDisplayData();
-     backgroundImage = weatherDisplayData.weatherImage;
-     weatherDisplayIcon = weatherDisplayData.weatherIcon;
+    //  WeatherDisplayData weatherDisplayData = weatherData.getWeatherDisplayData();
+    //  backgroundImage = weatherDisplayData.weatherImage;
+    //  weatherDisplayIcon = weatherDisplayData.weatherIcon;
 
    });
   }

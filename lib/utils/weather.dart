@@ -46,7 +46,7 @@ class WeatherData {
       print("Api эч кандай мааниге ээ эмес");
     }
 
-    WeatherDisplayData getWeatherDisplayData() {
+    WeatherDisplayData getWeatherDisplayData(){
       if (currentCondition < 600) {
         return WeatherDisplayData(
             weatherIcon: const Icon(
@@ -79,5 +79,5 @@ class WeatherData {
     }
   }
 
-  WeatherDisplayData getWeatherDisplayData() {}
+  
 }
