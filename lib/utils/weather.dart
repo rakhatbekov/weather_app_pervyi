@@ -8,7 +8,7 @@ import 'package:http/http.dart';
 import 'location.dart';
 
 
-const apiKey = 'b0d7173b2dadb20e9c6e19c27207c763';
+const apiKey = '**************************';
 
 class WeatherDisplayData {
   Icon weatherIcon;
