@@ -18,13 +18,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
     await locationData.getCurrentLocation();
 
     if (locationData.latitude == null || locationData.longitude == null) {
-      print('жайгашкан жери тууралуу маалымат келбейт');
+      debugPrint('жайгашкан жери тууралуу маалымат келбейт');
 
     } 
     
     else {
-      print('latitude:'+ locationData.latitude.toString());
-      print('longitude:'+ locationData.longitude.toString());
+      debugPrint('latitude:'+ locationData.latitude.toString());
+      debugPrint('longitude:'+ locationData.longitude.toString());
       
     }
   }
@@ -34,8 +34,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     WeatherData weatherData = WeatherData(locationData: locationData);
     await weatherData.getCurrentTemperature();
 
-    if(weatherData.currentTemperature== null || weatherData.currentCondition== null ){
-      print("Apiден температура же статус маалыматы бош кайтат");
+    if(weatherData.currentTemperature == null || weatherData.currentCondition == null ){
+      debugPrint("Apiден температура же статус маалыматы бош кайтат");
     }
 
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){

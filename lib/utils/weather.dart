@@ -40,31 +40,31 @@ class WeatherData {
         currentCondition = currentWeather['weather'][0]['id'];
         city = currentWeather['name'];
       } catch (e) {
-        print(e);
+        debugPrint(e);
       }
     } else {
-      print("Api эч кандай мааниге ээ эмес");
+      debugPrint("Api эч кандай мааниге ээ эмес");
     }
-
+  } 
     WeatherDisplayData getWeatherDisplayData(){
-      if (currentCondition < 600) {
+      if (currentCondition <600) {
         return WeatherDisplayData(
             weatherIcon: const Icon(
               FontAwesomeIcons.cloud,
               size: 75.0,
               color: Colors.white,
             ),
-            weatherImage:  AssetImage('assets/images/pasmurno.jpg'));
+            weatherImage: const AssetImage('assets/images/pasmurno.jpg'));
       } else {
-        var now = new DateTime.now();
-        if (now.hour > 19) {
+        var now =  DateTime.now();
+        if (now.hour >=19){
           return WeatherDisplayData(
               weatherIcon: const Icon(
                 FontAwesomeIcons.moon,
                 size: 75.0,
                 color: Colors.white,
               ),
-              weatherImage:  AssetImage('assets/images/noch.jpg'));
+              weatherImage: const  AssetImage('assets/images/noch.jpg'));
         } else {
            return WeatherDisplayData(
               weatherIcon: const Icon(
@@ -72,7 +72,7 @@ class WeatherData {
                 size: 75.0,
                 color: Colors.white,
               ),
-              weatherImage:  AssetImage('assets/images/solnecho.jpg'));
+              weatherImage:const AssetImage('assets/images/solnecho.jpg'));
 
         }
       }
@@ -80,4 +80,4 @@ class WeatherData {
   }
 
   
-}
+
